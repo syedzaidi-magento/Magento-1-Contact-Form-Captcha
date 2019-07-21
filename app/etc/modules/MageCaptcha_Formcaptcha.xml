@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MageCaptcha_Formcaptcha>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Captcha/>
+            </depends>
+            <version>1.1.0</version>
+        </MageCaptcha_Formcaptcha>
+    </modules>
+</config>

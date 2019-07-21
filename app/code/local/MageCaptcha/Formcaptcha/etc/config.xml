@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+    <MageCaptcha_Formcaptcha>
+        <version>1.1.0</version>
+    </MageCaptcha_Formcaptcha>
+    </modules>
+    <default>
+        <captcha translate="label">
+            <frontend>
+                <areas>
+                    <contact_us>
+                        <label>Contact us Form</label>
+                    </contact_us>
+                </areas>
+            </frontend>
+        </captcha>
+        <customer>
+            <captcha>
+                <always_for>
+                    <contact_us>1</contact_us>
+                </always_for>
+            </captcha>
+        </customer>
+    </default>
+    <frontend>
+        <routers>
+            <contacts>
+                <args>
+                    <modules>
+                        <magecaptcha_formcaptcha before="Mage_Contacts">MageCaptcha_Formcaptcha</magecaptcha_formcaptcha>
+                    </modules>
+                </args>
+            </contacts>
+        </routers>
+		<layout>
+             <updates>
+                  <contactscaptcha>
+                        <file>formcaptcha.xml</file>
+                  </contactscaptcha>
+             </updates>
+        </layout>
+    </frontend>
+</config>
